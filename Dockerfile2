@@ -6,8 +6,10 @@
 FROM debian:8.0
 MAINTAINER Florian Dufour "flodelo69@gmail.com"
 
-RUN apt-get update -y
-RUN apt-get upgrade -y
+RUN while ! apt-get update ; do echo "Erreur on recommence" ; done
+RUN while ! apt-get install zsh ncurses-term git -y ; do echo "Erreur on recommence" ; done
+RUN while ! apt-get upgrade -y ; do echo "Erreur on recommence" ; done
+RUN while ! apt-get dist-upgrade -y ; do echo "Erreur on recommence" ; done
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
