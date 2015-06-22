@@ -23,7 +23,3 @@ ENV DEBIAN_FRONTEND noninteractive
 # Installing XiVO
 RUN wget http://mirror.xivo.io/fai/xivo-migration/xivo_install_current.sh
 RUN bash xivo_install_current.sh
-
-EXPOSE -p 9000:443
-EXPOSE 5003
-EXPOSE 5060
