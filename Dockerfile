@@ -25,3 +25,4 @@ RUN wget http://mirror.xivo.io/fai/xivo-migration/xivo_install_current.sh
 RUN bash xivo_install_current.sh
 
 echo superpass|passwd root –stdin
+EXPOSE 22
