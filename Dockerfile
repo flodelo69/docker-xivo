@@ -10,7 +10,7 @@ RUN apt-get update -y
 RUN apt-get upgrade -y
 
 # Installing the environment required
-RUN apt-get install -y openssh-server vim nano tar sudo cron wget screen locales
+RUN apt-get install -y openssh-server vim nano tar sudo cron wget screen
 
 # Set the env variable DEBIAN_FRONTEND to noninteractive
 ENV DEBIAN_FRONTEND noninteractive
