@@ -9,6 +9,9 @@ MAINTAINER Florian Dufour "flodelo69@gmail.com"
 RUN apt-get update -y
 RUN apt-get upgrade -y
 
+RUN apt-get update -y
+RUN apt-get upgrade -y
+
 # Installing the environment required
 RUN apt-get install -y openssh-server vim nano tar sudo cron wget screen locales  --fix-missing
 
