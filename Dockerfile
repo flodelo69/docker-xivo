@@ -25,8 +25,8 @@ RUN wget http://mirror.xivo.io/fai/xivo-migration/xivo_install_current.sh
 RUN bash xivo_install_current.sh
 
 #XiVO Start
-RUN xivo-service status
-RUN xivo-service start
-RUN xivo-service status
+#RUN xivo-service status
+#RUN xivo-service start
+#RUN xivo-service status
 EXPOSE 22
 EXPOSE 443
