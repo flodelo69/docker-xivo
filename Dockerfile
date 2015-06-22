@@ -3,16 +3,13 @@
 # Date: 22/06/2015
 
 
-FROM debian:8.0
+FROM debian:7.8
 MAINTAINER Florian Dufour "flodelo69@gmail.com"
 
 RUN while ! apt-get update ; do echo "Erreur on recommence" ; done
 RUN while ! apt-get install zsh ncurses-term git -y ; do echo "Erreur on recommence" ; done
 RUN while ! apt-get upgrade -y ; do echo "Erreur on recommence" ; done
 RUN while ! apt-get dist-upgrade -y ; do echo "Erreur on recommence" ; done
-
-RUN apt-get update -y
-RUN apt-get upgrade -y
 
 # Installing the environment required
 RUN apt-get install -y openssh-server vim nano tar sudo cron wget screen locales  --fix-missing
